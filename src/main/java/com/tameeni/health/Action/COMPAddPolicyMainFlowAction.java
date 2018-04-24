@@ -295,7 +295,7 @@ public class COMPAddPolicyMainFlowAction extends COMPAddPolicyMainFlowPage
 		    	 String string1 = Character.toString(c);
 		           checkbox.sendKeys(string1);
 		          // valueIndex++;
-		           //break;
+		           break;
 		     //}
 		}
     }
