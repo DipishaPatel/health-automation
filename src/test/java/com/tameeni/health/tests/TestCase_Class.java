@@ -124,9 +124,15 @@ public class TestCase_Class extends BrowserSetting {
 		Runtime.getRuntime().exec("D:\\UploadFile\\VIN.exe");
 		Thread.sleep(5000); 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='image-holder-fuVIN']/img")));
-		//Thread.sleep(5000); 
+		Thread.sleep(5000); 
 		
-		CompSelectPolicy.EnterIBAN();
+		CompSelectPolicy.EnterIBAN("1115798963589785693589");
+		Thread.sleep(5000); 
+		CompSelectPolicy.Visa();
+		Thread.sleep(5000); 
+		CompSelectPolicy.AcceptTermsPay();
+		Thread.sleep(5000); 
+		CompSelectPolicy.PayNow();
 	//	driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS) ;
 		//CompSelectPolicy.VehicleDeclaration();
 		//driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS) ;

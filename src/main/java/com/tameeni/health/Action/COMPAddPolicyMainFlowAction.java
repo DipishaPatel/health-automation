@@ -282,38 +282,66 @@ public class COMPAddPolicyMainFlowAction extends COMPAddPolicyMainFlowPage
 		}
 		
 	}
-	public void EnterIBAN() 
+	public void EnterIBAN(String StrIban) 
     {
 
-		String value = "11157899987";
-		//int valueIndex = 0;
+		String value = StrIban;
 		List<WebElement> elementsList= COMPAddPolicyMainFlowPage.IBAN;
-		for(int i = 0; i < elementsList.size(); ++i) {
+		for(int i = 0; i < elementsList.size(); ++i) 
+		{
 		     WebElement checkbox = elementsList.get(i);
 		     //for (int j = valueIndex; j < value.length(); j++) {
 		    	 char c = value.charAt(i);
 		    	 String string1 = Character.toString(c);
 		           checkbox.sendKeys(string1);
-		          // valueIndex++;
-		           break;
-		     //}
+		      
 		}
     }
-	public void EnterLogin1(String StrIban) 
-    {
-		List<WebElement> row = COMPAddPolicyMainFlowPage.IBAN;
-		Iterator<WebElement> iter = row.iterator();
-		while (iter.hasNext()) 
-		 {
-
-			 WebElement item = iter.next();
-				//jse.executeScript("scroll(1150,1101)");
-				//jse.executeScript("arguments[0].click();", item);
-				
-				//	item.getText();
-					System.out.print(item.getText());
-					
-					item.clear();
-		 }
-    }
+	public void ImagesTerms()
+	{
+		try
+		{
+			ImagesTerms.click();
+		}
+		catch(Exception e)
+		{
+			Log.getLogger("\"VINImage element is not found.") ;
+		}
+	}
+	public void Visa()
+	{
+		try
+		{
+			VISA.click();
+		}
+		catch(Exception e)
+		{
+			Log.getLogger("\"VINImage element is not found.") ;
+		}
+		
+	}
+	public void AcceptTermsPay()
+	{
+		try
+		{
+			AcceptTermsPay.click();
+		}
+		catch(Exception e)
+		{
+			Log.getLogger("\"VINImage element is not found.") ;
+		}
+		
+	}
+	public void PayNow()
+	{
+		try
+		{
+			PayNow.click();
+		}
+		catch(Exception e)
+		{
+			Log.getLogger("\"VINImage element is not found.") ;
+		}
+		
+	}
 }

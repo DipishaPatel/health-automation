@@ -108,7 +108,7 @@ public class COMPAddPolicyMainFlowPage extends PageObject {
 	 @FindBy(xpath = "//div[@class='col-sm-12 col-md-6 padding-right40']//label[2]/span[1]/span[1]")
 	 public static WebElement person;
 	 
-	 @FindBy(xpath = "//span[@class='Form-label-text'][contains(text(),'I hereby declare that the vehicle images are of my')]")
+	 @FindBy(xpath = "//div[@class='declare']//div[@class='form-row']//div[@class='input-box custom-checkbox']//div[@class='Form-section']//label[@class='Form-label--tick']//input")
 	 public static WebElement ImagesTerms;
 	 
 	 @FindBy(xpath ="//html//div[@class='input-box iban-input hidden-xs']/input")
@@ -117,8 +117,15 @@ public class COMPAddPolicyMainFlowPage extends PageObject {
 	 
 	 @FindBy(xpath = "//span[@class='radio-text'][contains(text(),'VISA')]")
 	 public static WebElement VISA;
-	 
-	 @FindBy(xpath = "//div[@id='agreement']//div[@class='Form-section']//label[@class='Form-label--tick']//span[@class='Form-label-text']")
+	
+	 @FindBy(xpath = "//div[@id='agreement']//div[@class='Form-section']//label[@class='Form-label--tick']//input")
 	 public static WebElement AcceptTermsPay;
-
+	 
+	 @FindBy(xpath = "//button[@id='next']")
+	 public static WebElement PayNow;
+	 
+	 
+	 
+	 
+	
 }
