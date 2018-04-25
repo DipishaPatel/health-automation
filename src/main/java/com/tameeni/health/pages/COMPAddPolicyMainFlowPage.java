@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 
 public class COMPAddPolicyMainFlowPage extends PageObject {
 
@@ -108,7 +109,7 @@ public class COMPAddPolicyMainFlowPage extends PageObject {
 	 @FindBy(xpath = "//div[@class='col-sm-12 col-md-6 padding-right40']//label[2]/span[1]/span[1]")
 	 public static WebElement person;
 	 
-	 @FindBy(xpath = "//div[@class='declare']//div[@class='form-row']//div[@class='input-box custom-checkbox']//div[@class='Form-section']//label[@class='Form-label--tick']//input")
+	 @FindBy(xpath = "//div[@class='input-box custom-checkbox']//div[@class='Form-section']//label[@class='Form-label--tick']//span[@class='Form-label-text']")
 	 public static WebElement ImagesTerms;
 	 
 	 @FindBy(xpath ="//html//div[@class='input-box iban-input hidden-xs']/input")
@@ -118,11 +119,15 @@ public class COMPAddPolicyMainFlowPage extends PageObject {
 	 @FindBy(xpath = "//span[@class='radio-text'][contains(text(),'VISA')]")
 	 public static WebElement VISA;
 	
-	 @FindBy(xpath = "//div[@id='agreement']//div[@class='Form-section']//label[@class='Form-label--tick']//input")
-	 public static WebElement AcceptTermsPay;
+	 @FindBy(xpath = "//div[@id='agreement']//div[@class='Form-section']//label[@class='Form-label--tick']//span[contains(text(),'I accept the')]")
+	// @FindBy(how = How.PARTIAL_LINK_TEXT, using = "I accept the" ) // ="//div[@class='input-box custom-checkbox']//div[@class='Form-section']//label[@class='Form-label--tick']//span[@class='Form-label-text']")
+	public static WebElement AcceptTermsPay;
+	//protected static List<WebElement> AcceptTermsPay;
 	 
 	 @FindBy(xpath = "//button[@id='next']")
 	 public static WebElement PayNow;
+	 @FindBy(xpath= "//span[contains(text(),'I accept the')]")
+	 public static WebElement Iaccept;
 	 
 	 
 	 

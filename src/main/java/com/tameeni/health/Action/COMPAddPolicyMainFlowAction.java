@@ -324,8 +324,14 @@ public class COMPAddPolicyMainFlowAction extends COMPAddPolicyMainFlowPage
 	{
 		try
 		{
-			AcceptTermsPay.click();
+			Actions action = new Actions(driver);
+			//WebElement we = driver.findElement(By.xpath("html/body/div[13]/ul/li[4]/a"));
+			action.moveToElement(AcceptTermsPay).click(Iaccept).build().perform();
+			//String str = AcceptTermsPay.getText();
+			//AcceptTermsPay.click();
 		}
+			     
+			
 		catch(Exception e)
 		{
 			Log.getLogger("\"VINImage element is not found.") ;
