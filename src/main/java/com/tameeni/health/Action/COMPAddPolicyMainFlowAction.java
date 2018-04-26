@@ -149,6 +149,7 @@ public class COMPAddPolicyMainFlowAction extends COMPAddPolicyMainFlowPage
 	@SuppressWarnings("unlikely-arg-type")
 	public void selectDeductible()
 	{
+		
 		List<WebElement> row = COMPAddPolicyMainFlowPage.Deductible;
 		 Iterator<WebElement> iter = row.iterator();
 		 while (iter.hasNext()) 
@@ -156,7 +157,7 @@ public class COMPAddPolicyMainFlowAction extends COMPAddPolicyMainFlowPage
 
 				WebElement item = iter.next();
 				jse.executeScript("scroll(1150,1101)");
-				jse.executeScript("arguments[0].click();", item);
+			//	jse.executeScript("arguments[0].click();", item);
 				item.click();
 				 break;
 		 }
@@ -166,15 +167,22 @@ public class COMPAddPolicyMainFlowAction extends COMPAddPolicyMainFlowPage
 	public void selectDeductibleAmount()
 	{
 		List<WebElement> row = COMPAddPolicyMainFlowPage.DeductibleAmount;
-		 Iterator<WebElement> iter = row.iterator();
-		 while (iter.hasNext()) 
+		// Iterator<WebElement> iter = row.iterator();
+		// List<WebElement> elementsList= COMPAddPolicyMainFlowPage.IBAN;
+			for(int i = 0; i < row.size(); ++i) 
+			{
+			     WebElement checkbox = row.get(i);
+			     checkbox.click();
+			     break;
+			}
+		/* while (iter.hasNext()) 
 		 {
 
 				WebElement item = iter.next();
 				jse.executeScript("arguments[0].click();", item);
 				item.click();
 				 break;
-		 }
+		 }*/
 	}
 	
 
@@ -325,10 +333,10 @@ public class COMPAddPolicyMainFlowAction extends COMPAddPolicyMainFlowPage
 		try
 		{
 			Actions action = new Actions(driver);
-			//WebElement we = driver.findElement(By.xpath("html/body/div[13]/ul/li[4]/a"));
-			action.moveToElement(AcceptTermsPay).click(Iaccept).build().perform();
-			//String str = AcceptTermsPay.getText();
-			//AcceptTermsPay.click();
+			int hight = AcceptTermsPay.getSize().getHeight();
+			int weight = AcceptTermsPay.getSize().getWidth();
+			action.moveToElement(AcceptTermsPay).moveByOffset(weight/2-150, 0).release().click().perform();
+			
 		}
 			     
 			

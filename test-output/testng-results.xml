@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="157176" started-at="2018-04-25T14:44:33Z" finished-at="2018-04-25T14:47:10Z">
+  <suite name="Default suite" duration-ms="174181" started-at="2018-04-26T11:31:39Z" finished-at="2018-04-26T11:34:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="157176" started-at="2018-04-25T14:44:33Z" finished-at="2018-04-25T14:47:10Z">
+    <test name="Default test" duration-ms="174181" started-at="2018-04-26T11:31:39Z" finished-at="2018-04-26T11:34:33Z">
       <class name="com.tameeni.health.tests.TestCase_Class">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tameeni.health.tests.TestCase_Class@59fa1d9b]" name="setUp" is-config="true" duration-ms="9950" started-at="2018-04-25T20:14:33Z" finished-at="2018-04-25T20:14:43Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tameeni.health.tests.TestCase_Class@59fa1d9b]" name="setUp" is-config="true" duration-ms="15369" started-at="2018-04-26T17:01:39Z" finished-at="2018-04-26T17:01:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="selectTestss()[pri:0, instance:com.tameeni.health.tests.TestCase_Class@59fa1d9b]" name="selectTestss" duration-ms="147216" started-at="2018-04-25T20:14:43Z" finished-at="2018-04-25T20:17:10Z">
+        <test-method status="PASS" signature="selectTestss()[pri:0, instance:com.tameeni.health.tests.TestCase_Class@59fa1d9b]" name="selectTestss" duration-ms="158799" started-at="2018-04-26T17:01:54Z" finished-at="2018-04-26T17:04:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectTestss -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.tameeni.health.tests.TestCase_Class@59fa1d9b]" name="cleanUp" is-config="true" duration-ms="1" started-at="2018-04-25T20:17:10Z" finished-at="2018-04-25T20:17:10Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.tameeni.health.tests.TestCase_Class@59fa1d9b]" name="cleanUp" is-config="true" duration-ms="0" started-at="2018-04-26T17:04:33Z" finished-at="2018-04-26T17:04:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->

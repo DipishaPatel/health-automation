@@ -70,7 +70,7 @@ public class TestCase_Class extends BrowserSetting {
 		Thread.sleep(1000);
 		CompSelectPolicy.SelectDate();
 		Thread.sleep(1000);
-		CompSelectPolicy.EnterEstimateValue("40612");
+		CompSelectPolicy.EnterEstimateValue("94050");
 		Thread.sleep(1000);
 		 WebDriverWait wait = new WebDriverWait(driver, 5000);
 		CompSelectPolicy.ClickGetQuoteNow();
@@ -133,8 +133,8 @@ public class TestCase_Class extends BrowserSetting {
 		CompSelectPolicy.Visa();
 		Thread.sleep(5000); 
 		CompSelectPolicy.AcceptTermsPay();
-		//Thread.sleep(5000); 
-		//CompSelectPolicy.PayNow();
+		Thread.sleep(5000); 
+		CompSelectPolicy.PayNow();
 	//	driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS) ;
 		//CompSelectPolicy.VehicleDeclaration();
 		//driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS) ;
