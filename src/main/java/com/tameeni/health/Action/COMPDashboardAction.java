@@ -1,10 +1,11 @@
 package com.tameeni.health.Action;
 
+import org.eclipse.jetty.util.log.Log;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.Select;
+
 
 import com.tameeni.health.pages.COMPDashboardPage;
-import com.tameeni.health.pages.COMPHomePage;
+
 
 public class COMPDashboardAction extends COMPDashboardPage {
 
@@ -13,12 +14,26 @@ public class COMPDashboardAction extends COMPDashboardPage {
 	}
 	public void clickpurchaseNewPolicy() 
     {
+		try
+		{
 		
 		COMPDashboardAction.PurchaseNewpolicy.click();
+		}
+		catch(Exception e)
+		{
+			Log.getLogger("\"Report Category button element is not found.") ;
+		}
     }
 	public void clickpolicytype() 
     {
-		COMPDashboardAction.insurancetype.click();;
+		try
+		{
+		COMPDashboardAction.insurancetype.click();
+		}
+		catch(Exception e)
+		{
+			Log.getLogger("\"Report Category button element is not found.") ;
+		}
     }
 	
 

@@ -5,31 +5,29 @@ import java.util.List;
 
 
 import org.eclipse.jetty.util.log.Log;
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
+
+
 import com.tameeni.health.pages.COMPAddPolicyMainFlowPage;
 
 
 public class COMPAddPolicyMainFlowAction extends COMPAddPolicyMainFlowPage 
 {
-
-	JavascriptExecutor jse = (JavascriptExecutor)driver;
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
 	
 		public COMPAddPolicyMainFlowAction(WebDriver driver) 
 		{
 			super(driver);
 		}
-		
 			public void clickselectPolicyholder() 
 			{
 				try
@@ -57,98 +55,182 @@ public class COMPAddPolicyMainFlowAction extends COMPAddPolicyMainFlowPage
     }
 	public void clickselectVehile() 
     {
-		//Iterator<WebElement> iter = COMPAddPolicyMainFlowAction.SelectAddress.iterator();
-		COMPAddPolicyMainFlowAction.btnSelectVehicle.get(1).click();
+		try
+		{
+			COMPAddPolicyMainFlowAction.btnSelectVehicle.get(1).click();
+		}
+		catch(Exception e)
+		{
+			Log.getLogger("\"Report Category button element is not found.") ;
+		}
 	    
     }
 	public void selectVehicle()
 	{
-		Select dropdown = new Select(VehicleID);
-		dropdown.selectByIndex(1);
-       // dropdown.getOptions().get(1).click();
+		try
+		{
+			Select dropdown = new Select(VehicleID);
+			dropdown.selectByIndex(1);
+		}
+		catch(Exception e)
+		{
+			Log.getLogger("\"Report Category button element is not found.") ;
+		}
+
 	}
 		
 	public void selectRegion()
 	{
-		Select dropdown = new Select(Region);
-		dropdown.selectByIndex(1);
-       // dropdown.getOptions().get(1).click();
+		try
+		{
+			Select dropdown = new Select(Region);
+			dropdown.selectByIndex(1);
+		}
+		catch(Exception e)
+		{
+			Log.getLogger("\"Report Category button element is not found.") ;
+		}
+      
 	}
 	public void selectcity()
 	{
-		Select dropdown = new Select(City);
-		dropdown.selectByIndex(1);
-       // dropdown.getOptions().get(1).click();
+		try
+		{
+			
+			Select dropdown = new Select(City);
+			dropdown.selectByIndex(1);
+		}
+		catch(Exception e)
+		{
+			Log.getLogger("\"Report Category button element is not found.") ;
+		}
+       
 	}
 	public void SelectOccupation()
 	{
-		Select dropdown = new Select(SelectOccupation);
-		dropdown.selectByIndex(1);
-       // dropdown.getOptions().get(1).click();
+		try
+		{
+			Select dropdown = new Select(SelectOccupation);
+			dropdown.selectByIndex(1);
+		}
+		catch(Exception e)
+		{
+			Log.getLogger("\"Report Category button element is not found.") ;
+		}
 	}
 	public void SelectageDriver() throws InterruptedException 
 	{
-		Select dropdown = new Select(Selectage);
+		try
+		{
+			Select dropdown = new Select(Selectage);
 				dropdown.selectByIndex(1);
 		        dropdown.getOptions().get(1).click();
-		COMPAddPolicyMainFlowAction.SelectAdditionPremium.click();
-		Thread.sleep(1000);
-		COMPAddPolicyMainFlowAction.SelectAdditionPremium.click();
+		        COMPAddPolicyMainFlowAction.SelectAdditionPremium.click();
+		        Thread.sleep(1000);
+		        COMPAddPolicyMainFlowAction.SelectAdditionPremium.click();
+		}
+		catch(Exception e)
+		{
+			Log.getLogger("\"Report Category button element is not found.") ;
+		}
 		
 	}
 	public void ClickSelectDeclaration()
 	{
-		COMPAddPolicyMainFlowAction.SelectDeclaration.click();
+		try
+		{
+			COMPAddPolicyMainFlowAction.SelectDeclaration.click();
+		}
+		catch(Exception e)
+		{
+			Log.getLogger("\"Report Category button element is not found.") ;
+		}
+		
 	}
 	public void ClickNextotherDetail()
 	{
-		//JavascriptExecutor jse = (JavascriptExecutor)driver;
-		jse.executeScript("arguments[0].click();", COMPAddPolicyMainFlowPage.NextOtherDetail);
-		//COMPAddPolicyMainFlowAction.NextOtherDetail.click();
+		try
+		{
+		 jse.executeScript("arguments[0].click();", COMPAddPolicyMainFlowPage.NextOtherDetail);
+		}
+		catch(Exception e)
+		{
+			Log.getLogger("\"Report Category button element is not found.") ;
+		}
 	}
 	
 	public void ClickDatePicker()
 	{
-	//	JavascriptExecutor jsd = (JavascriptExecutor)driver;
-	//	jsd.executeScript("arguments[0].click();", COMPAddPolicyMainFlowPage.DatePicker);
-		COMPAddPolicyMainFlowAction.DatePicker.click();
+		try
+		{
+			COMPAddPolicyMainFlowAction.DatePicker.click();
+		}
+		catch(Exception e)
+		{
+			Log.getLogger("\"Report Category button element is not found.") ;
+		}
 	}
 	public void SelectDate()
 	
 	{
-		jse.executeScript("arguments[0].click();", COMPAddPolicyMainFlowPage.selectdate);
-		//selectdate.click();
+		try
+		{
+			jse.executeScript("arguments[0].click();", COMPAddPolicyMainFlowPage.selectdate);
+		}
+		catch(Exception e)
+		{
+			Log.getLogger("\"Report Category button element is not found.") ;
+		}
 	}
 	public void EnterEstimateValue(String StrValue)
 	
 	{
-		EstimateValue.sendKeys(StrValue);
+		try
+		{
+			EstimateValue.sendKeys(StrValue);
+		}
+		catch(Exception e)
+		{
+			Log.getLogger("\"Report Category button element is not found.") ;
+		}
 	}
 	public void ClickGetQuoteNow()
 	
 	{
-		jse.executeScript("arguments[0].click();", COMPAddPolicyMainFlowPage.GetQuote);
-	//	GetQuote.click();
+		try
+		{
+			jse.executeScript("arguments[0].click();", COMPAddPolicyMainFlowPage.GetQuote);
+		}
+		catch(Exception e)
+		{
+			Log.getLogger("\"Report Category button element is not found.") ;
+		}
+	
 	}
+	@SuppressWarnings("unused")
 	public void ClickFeature()
 	{
+		try
+		{
 		 List<WebElement> row = COMPAddPolicyMainFlowPage.Feature1;
-		 Iterator<WebElement> iter = row.iterator();
-		 while (iter.hasNext()) 
-		 {
+			for(int i = 0; i < row.size(); i++) 
+			{
+			     WebElement checkbox = row.get(i);
+			     checkbox.click();
+			     break;
+			}
+		}
+		catch(Exception e)
+		{
+			Log.getLogger("\"Report Category button element is not found.") ;
+		}
 
-				WebElement item = iter.next();
-				jse.executeScript("arguments[0].click();", item);
-				item.click();
-				 break;
-		 }
-		
-	//	Select checkbox = new Select(Feature1);
-	//	checkbox.selectByIndex(0);
 	}
-	@SuppressWarnings("unlikely-arg-type")
+	
 	public void selectDeductible()
 	{
+		try
+		{
 		
 		List<WebElement> row = COMPAddPolicyMainFlowPage.Deductible;
 		 Iterator<WebElement> iter = row.iterator();
@@ -156,43 +238,42 @@ public class COMPAddPolicyMainFlowAction extends COMPAddPolicyMainFlowPage
 		 {
 
 				WebElement item = iter.next();
-				jse.executeScript("scroll(1150,1101)");
-			//	jse.executeScript("arguments[0].click();", item);
+				jse.executeScript("scroll(1150,1101)");			
 				item.click();
 				 break;
 		 }
+		}
+		catch(Exception e)
+		{
+			Log.getLogger("\"Report Category button element is not found.") ;
+		}
 	}
 	
-	@SuppressWarnings("unlikely-arg-type")
+	
+	@SuppressWarnings("unused")
 	public void selectDeductibleAmount()
 	{
+		try
+		{
 		List<WebElement> row = COMPAddPolicyMainFlowPage.DeductibleAmount;
-		// Iterator<WebElement> iter = row.iterator();
-		// List<WebElement> elementsList= COMPAddPolicyMainFlowPage.IBAN;
-			for(int i = 0; i < row.size(); ++i) 
+			for(int i = 0; i < row.size(); i++) 
 			{
 			     WebElement checkbox = row.get(i);
 			     checkbox.click();
 			     break;
 			}
-		/* while (iter.hasNext()) 
-		 {
-
-				WebElement item = iter.next();
-				jse.executeScript("arguments[0].click();", item);
-				item.click();
-				 break;
-		 }*/
+		}
+		catch(Exception e)
+		{
+			Log.getLogger("\"Report Category button element is not found.") ;
+		}
 	}
 	
-
-	
-
-	@SuppressWarnings("unlikely-arg-type")
 	public void clickICSelect() 
     {
-		//Iterator<WebElement> iter = COMPAddPolicyMainFlowAction.SelectAddress.iterator();
-		//COMPAddPolicyMainFlowAction.btnNext.get(0).click();
+		try
+		{
+		
 		List<WebElement> row = COMPAddPolicyMainFlowPage.btnNext;
 		Iterator<WebElement> iter = row.iterator();
 		 while (iter.hasNext()) 
@@ -200,28 +281,42 @@ public class COMPAddPolicyMainFlowAction extends COMPAddPolicyMainFlowPage
 
 				WebElement item = iter.next();
 				jse.executeScript("scroll(1150,1101)");
-			//	jse.executeScript("arguments[0].click();", item);
+			
 				item.click();
 				 break;
 		 }
+		}
+		catch(Exception e)
+		{
+			Log.getLogger("\"Report Category button element is not found.") ;
+		}
     }
 	public void Purchased()
 	
 	{
+		try
+		{
+		
 		PurchasedConti.click();
+		}
+		catch(Exception e)
+		{
+			Log.getLogger("\"Report Category button element is not found.") ;
+		}
 	}
 	public void FrontImageClick()
 	{
-		//WebDriverWait wait=new WebDriverWait(driver, 20);
-	//	WebElement guru99seleniumlink;
-	//	guru99seleniumlink= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='fuFront']" )));
+		try
+		{
 		jse.executeScript("scroll(1150,1101)");
-		//jse.executeScript("arguments[0].click();", FrontImage);
+		
 		FrontImage.click();
-	//	Boolean imageLoaded1 = (Boolean) ((JavascriptExecutor)driver).executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0",VehiclefuFront);
-      //  if (!imageLoaded1)
-       
-		//.click();
+		}
+		
+		catch(Exception e)
+		{
+			Log.getLogger("\"Report Category button element is not found.") ;
+		}
 	}
 	public void RearImageClick()
 	{
@@ -236,11 +331,25 @@ public class COMPAddPolicyMainFlowAction extends COMPAddPolicyMainFlowPage
 	}
 	public void RightImageClick()
 	{
+		try
+		{
 		RightImage.click();
+		}
+		catch(Exception e)
+		{
+			Log.getLogger("\"RearImage element is not found.") ;
+		}
 	}
 	public void LeftImageClick()
 	{
+		try
+		{
 		LeftImage.click();
+		}
+		catch(Exception e)
+		{
+			Log.getLogger("\"RearImage element is not found.") ;
+		}
 	}
 	public void VINImageClick()
 	{
@@ -282,6 +391,7 @@ public class COMPAddPolicyMainFlowAction extends COMPAddPolicyMainFlowPage
 	{
 		try
 		{
+			jse.executeScript("scroll(1150,1101)");
 			ImagesTerms.click();
 		}
 		catch(Exception e)
@@ -292,23 +402,30 @@ public class COMPAddPolicyMainFlowAction extends COMPAddPolicyMainFlowPage
 	}
 	public void EnterIBAN(String StrIban) 
     {
-
+		try
+		{
 		String value = StrIban;
 		List<WebElement> elementsList= COMPAddPolicyMainFlowPage.IBAN;
 		for(int i = 0; i < elementsList.size(); ++i) 
 		{
 		     WebElement checkbox = elementsList.get(i);
-		     //for (int j = valueIndex; j < value.length(); j++) {
+		    
 		    	 char c = value.charAt(i);
 		    	 String string1 = Character.toString(c);
 		           checkbox.sendKeys(string1);
 		      
+		}
+		}
+		catch(Exception e)
+		{
+			Log.getLogger("\"VINImage element is not found.") ;
 		}
     }
 	public void ImagesTerms()
 	{
 		try
 		{
+			
 			ImagesTerms.click();
 		}
 		catch(Exception e)
@@ -333,7 +450,7 @@ public class COMPAddPolicyMainFlowAction extends COMPAddPolicyMainFlowPage
 		try
 		{
 			Actions action = new Actions(driver);
-			int hight = AcceptTermsPay.getSize().getHeight();
+		
 			int weight = AcceptTermsPay.getSize().getWidth();
 			action.moveToElement(AcceptTermsPay).moveByOffset(weight/2-150, 0).release().click().perform();
 			
