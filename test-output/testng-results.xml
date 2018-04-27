@@ -1,25 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="191553" started-at="2018-04-26T13:11:02Z" finished-at="2018-04-26T13:14:13Z">
+  <suite name="Default suite" duration-ms="190672" started-at="2018-04-27T13:59:18Z" finished-at="2018-04-27T14:02:29Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="191553" started-at="2018-04-26T13:11:02Z" finished-at="2018-04-26T13:14:13Z">
+    <test name="Default test" duration-ms="190672" started-at="2018-04-27T13:59:18Z" finished-at="2018-04-27T14:02:29Z">
       <class name="com.tameeni.health.tests.TestCase_Class">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tameeni.health.tests.TestCase_Class@59fa1d9b]" name="setUp" is-config="true" duration-ms="10273" started-at="2018-04-26T18:41:02Z" finished-at="2018-04-26T18:41:12Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tameeni.health.tests.TestCase_Class@3d3fcdb0]" name="setUp" is-config="true" duration-ms="10364" started-at="2018-04-27T19:29:18Z" finished-at="2018-04-27T19:29:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="selectTestss()[pri:0, instance:com.tameeni.health.tests.TestCase_Class@59fa1d9b]" name="selectTestss" duration-ms="181275" started-at="2018-04-26T18:41:12Z" finished-at="2018-04-26T18:44:13Z">
+        <test-method status="PASS" signature="selectTestss()[pri:0, instance:com.tameeni.health.tests.TestCase_Class@3d3fcdb0]" name="selectTestss" duration-ms="160030" started-at="2018-04-27T19:29:28Z" finished-at="2018-04-27T19:32:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectTestss -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.tameeni.health.tests.TestCase_Class@59fa1d9b]" name="cleanUp" is-config="true" duration-ms="1" started-at="2018-04-26T18:44:13Z" finished-at="2018-04-26T18:44:13Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.tameeni.health.tests.TestCase_Class@3d3fcdb0]" name="cleanUp" is-config="true" duration-ms="0" started-at="2018-04-27T19:32:09Z" finished-at="2018-04-27T19:32:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
       </class> <!-- com.tameeni.health.tests.TestCase_Class -->
+      <class name="com.tameeni.health.tests.TestCase_Login">
+        <test-method status="PASS" signature="Report()[pri:0, instance:com.tameeni.health.tests.TestCase_Login@5606c0b]" name="Report" is-config="true" duration-ms="7" started-at="2018-04-27T19:29:18Z" finished-at="2018-04-27T19:29:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Report -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tameeni.health.tests.TestCase_Login@5606c0b]" name="setUp" is-config="true" duration-ms="9402" started-at="2018-04-27T19:32:09Z" finished-at="2018-04-27T19:32:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="selectTestss()[pri:0, instance:com.tameeni.health.tests.TestCase_Login@5606c0b]" name="selectTestss" duration-ms="10861" started-at="2018-04-27T19:32:18Z" finished-at="2018-04-27T19:32:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectTestss -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.tameeni.health.tests.TestCase_Login@5606c0b]" name="cleanUp" is-config="true" duration-ms="0" started-at="2018-04-27T19:32:29Z" finished-at="2018-04-27T19:32:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tameeni.health.tests.TestCase_Login@5606c0b]" name="tearDown" is-config="true" duration-ms="198" started-at="2018-04-27T19:32:29Z" finished-at="2018-04-27T19:32:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tameeni.health.tests.TestCase_Login -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

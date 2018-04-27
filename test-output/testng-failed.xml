@@ -7,9 +7,14 @@
         <methods>
           <include name="setUp"/>
           <include name="selectTestss"/>
-          <include name="cleanUp"/>
+          <include name="Report"/>
         </methods>
       </class> <!-- com.tameeni.health.tests.TestCase_Class -->
+      <class name="com.tameeni.health.tests.TestCase_Login">
+        <methods>
+          <include name="selectTestss"/>
+        </methods>
+      </class> <!-- com.tameeni.health.tests.TestCase_Login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
