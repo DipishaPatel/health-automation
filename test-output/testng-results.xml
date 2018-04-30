@@ -1,43 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="190672" started-at="2018-04-27T13:59:18Z" finished-at="2018-04-27T14:02:29Z">
+  <suite name="Default suite" duration-ms="31175" started-at="2018-04-30T12:22:52Z" finished-at="2018-04-30T12:23:23Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="190672" started-at="2018-04-27T13:59:18Z" finished-at="2018-04-27T14:02:29Z">
-      <class name="com.tameeni.health.tests.TestCase_Class">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tameeni.health.tests.TestCase_Class@3d3fcdb0]" name="setUp" is-config="true" duration-ms="10364" started-at="2018-04-27T19:29:18Z" finished-at="2018-04-27T19:29:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="selectTestss()[pri:0, instance:com.tameeni.health.tests.TestCase_Class@3d3fcdb0]" name="selectTestss" duration-ms="160030" started-at="2018-04-27T19:29:28Z" finished-at="2018-04-27T19:32:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- selectTestss -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.tameeni.health.tests.TestCase_Class@3d3fcdb0]" name="cleanUp" is-config="true" duration-ms="0" started-at="2018-04-27T19:32:09Z" finished-at="2018-04-27T19:32:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanUp -->
-      </class> <!-- com.tameeni.health.tests.TestCase_Class -->
+    <test name="Default test" duration-ms="31175" started-at="2018-04-30T12:22:52Z" finished-at="2018-04-30T12:23:23Z">
       <class name="com.tameeni.health.tests.TestCase_Login">
-        <test-method status="PASS" signature="Report()[pri:0, instance:com.tameeni.health.tests.TestCase_Login@5606c0b]" name="Report" is-config="true" duration-ms="7" started-at="2018-04-27T19:29:18Z" finished-at="2018-04-27T19:29:18Z">
+        <test-method status="PASS" signature="Report()[pri:0, instance:com.tameeni.health.tests.TestCase_Login@42d80b78]" name="Report" is-config="true" duration-ms="172" started-at="2018-04-30T17:52:52Z" finished-at="2018-04-30T17:52:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Report -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tameeni.health.tests.TestCase_Login@5606c0b]" name="setUp" is-config="true" duration-ms="9402" started-at="2018-04-27T19:32:09Z" finished-at="2018-04-27T19:32:18Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tameeni.health.tests.TestCase_Login@42d80b78]" name="setUp" is-config="true" duration-ms="19523" started-at="2018-04-30T17:52:52Z" finished-at="2018-04-30T17:53:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="selectTestss()[pri:0, instance:com.tameeni.health.tests.TestCase_Login@5606c0b]" name="selectTestss" duration-ms="10861" started-at="2018-04-27T19:32:18Z" finished-at="2018-04-27T19:32:29Z">
+        <test-method status="FAIL" signature="selectTestss()[pri:0, instance:com.tameeni.health.tests.TestCase_Login@42d80b78]" name="selectTestss" duration-ms="11026" started-at="2018-04-30T17:53:12Z" finished-at="2018-04-30T17:53:23Z">
+          <exception class="java.lang.Error">
+            <message>
+              <![CDATA[Unresolved compilation problem: 
+	UserName cannot be resolved to a variable
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Error: Unresolved compilation problem: 
+	UserName cannot be resolved to a variable
+
+	at com.tameeni.health.Action.COMPHomeAction.enterusername(COMPHomeAction.java:43)
+	at com.tameeni.health.tests.TestCase_Login.selectTestss(TestCase_Login.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Error -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectTestss -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.tameeni.health.tests.TestCase_Login@5606c0b]" name="cleanUp" is-config="true" duration-ms="0" started-at="2018-04-27T19:32:29Z" finished-at="2018-04-27T19:32:29Z">
+        <test-method status="FAIL" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.tameeni.health.tests.TestCase_Login@42d80b78]" name="getResult" is-config="true" duration-ms="0" started-at="2018-04-30T17:53:23Z" finished-at="2018-04-30T17:53:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=selectTestss status=FAILURE method=TestCase_Login.selectTestss()[pri:0, instance:com.tameeni.health.tests.TestCase_Login@42d80b78] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.ClassCastException">
+            <message>
+              <![CDATA[com.aventstack.extentreports.ExtentTest cannot be cast to com.aventstack.extentreports.markuputils.Markup]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.ClassCastException: com.aventstack.extentreports.ExtentTest cannot be cast to com.aventstack.extentreports.markuputils.Markup
+	at com.tameeni.health.tests.BrowserSetting.getResult(BrowserSetting.java:90)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:786)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.ClassCastException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="SKIP" signature="cleanUp()[pri:0, instance:com.tameeni.health.tests.TestCase_Login@42d80b78]" name="cleanUp" is-config="true" duration-ms="0" started-at="2018-04-30T17:53:23Z" finished-at="2018-04-30T17:53:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tameeni.health.tests.TestCase_Login@5606c0b]" name="tearDown" is-config="true" duration-ms="198" started-at="2018-04-27T19:32:29Z" finished-at="2018-04-27T19:32:29Z">
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.tameeni.health.tests.TestCase_Login@42d80b78]" name="tearDown" is-config="true" duration-ms="0" started-at="2018-04-30T17:53:23Z" finished-at="2018-04-30T17:53:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

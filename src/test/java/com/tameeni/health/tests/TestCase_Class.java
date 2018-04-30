@@ -16,153 +16,177 @@ import org.testng.reporters.jq.Main;
 import com.tameeni.health.Action.COMPAddPolicyMainFlowAction;
 import com.tameeni.health.Action.COMPDashboardAction;
 import com.tameeni.health.Action.COMPHomeAction;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 
 public class TestCase_Class extends BrowserSetting {
-
 	
 /*--------------------------------Simple Purchase Flow-------------------------------*/
-	
-	String extentReportFile = System.getProperty("user.dir") + "\\extentReportFile.html";
-	ExtentReports extent = new ExtentReports(extentReportFile, true);
-	
-	@Test
 	public void selectTestss() throws InterruptedException, IOException {
-		ExtentTest extentTest =extent.startTest("Purchase Flow From My Account","Verify WebSite Title");
+		test = extent.createTest("Purchase Flow From My Account");
+	
+		//ExtentTest extentTest =extent.startTest("Purchase Flow From My Account","Verify WebSite Title");
+	//test = extent.createTest("Main Flow");
 		
 		COMPHomeAction hrHomeAction = new COMPHomeAction(driver);
 		COMPDashboardAction CompDashboard = new COMPDashboardAction(driver);
 		COMPAddPolicyMainFlowAction CompSelectPolicy = new COMPAddPolicyMainFlowAction(driver);
-		extentTest.log(LogStatus.INFO, "http://policyuat.gettameeni.com");
+		
 		hrHomeAction.clicklanguage();
-		extentTest.log(LogStatus.INFO, "Change language");
+		test.log(Status.INFO, MarkupHelper.createLabel("Change Language", ExtentColor.BLUE));
 		Thread.sleep(1000);
 		hrHomeAction.clickloginlink();
-		extentTest.log(LogStatus.INFO, "Login Popup");
+		test.log(Status.INFO, MarkupHelper.createLabel("Login Popup", ExtentColor.BLUE));
 		Thread.sleep(1000);
 		hrHomeAction.enterusername("patel.dipi@yahoo.com");
-		extentTest.log(LogStatus.INFO, "Enter UserName");
+		test.log(Status.INFO, MarkupHelper.createLabel("Enter UserName", ExtentColor.BLUE));
 		Thread.sleep(1000);
 		hrHomeAction.enterpassword("asd123qwe");
-		extentTest.log(LogStatus.INFO, "Enter Password");
+		test.log(Status.INFO, MarkupHelper.createLabel("Enter Password", ExtentColor.BLUE));
 		Thread.sleep(1000);
 		hrHomeAction.clickloginbutton();
-		extentTest.log(LogStatus.INFO, "Click Login button");
+		test.log(Status.INFO, MarkupHelper.createLabel("Click Login button", ExtentColor.BLUE));
 		Thread.sleep(1000);
 		CompDashboard.clickpurchaseNewPolicy();
-		extentTest.log(LogStatus.INFO, "Click PurchaseNewPolicy");
+		test.log(Status.INFO, MarkupHelper.createLabel("Click PurchaseNewPolicy", ExtentColor.BLUE));
 		Thread.sleep(1000);
 		CompDashboard.clickpolicytype();
-		extentTest.log(LogStatus.INFO, "Click Comprihencive Purchase policy from menu");
+		test.log(Status.INFO, MarkupHelper.createLabel("Click Comprihencive Purchase policy from menu", ExtentColor.BLUE));
 		Thread.sleep(1000);
 		CompSelectPolicy.clickselectPolicyholder();
-		extentTest.log(LogStatus.INFO, "Select PolicyHolder");
+		test.log(Status.INFO, MarkupHelper.createLabel("Select PolicyHolder", ExtentColor.BLUE));
 		Thread.sleep(2000);
 		CompSelectPolicy.clickselectAddress();
-		extentTest.log(LogStatus.INFO, "Select Address");
+		test.log(Status.INFO, MarkupHelper.createLabel("Select Address", ExtentColor.BLUE));
 		Thread.sleep(2000);
 		CompSelectPolicy.clickselectVehile();
-		extentTest.log(LogStatus.INFO, "select Vehile");
+		test.log(Status.INFO, MarkupHelper.createLabel("select Vehile", ExtentColor.BLUE));
 		Thread.sleep(1000);
 		CompSelectPolicy.selectVehicle();
-		extentTest.log(LogStatus.INFO, "select Vehile Type");
+		test.log(Status.INFO, MarkupHelper.createLabel("select Vehile Type", ExtentColor.BLUE));
 		Thread.sleep(1000);
 		CompSelectPolicy.selectRegion();
-		extentTest.log(LogStatus.INFO, "select Region");
+		test.log(Status.INFO, MarkupHelper.createLabel("select Region", ExtentColor.BLUE));
 		Thread.sleep(1000);
 		CompSelectPolicy.selectcity();
-		extentTest.log(LogStatus.INFO, "select City");
+		test.log(Status.INFO, MarkupHelper.createLabel("select City", ExtentColor.BLUE));
 		Thread.sleep(1000);
 		CompSelectPolicy.SelectOccupation();
-		extentTest.log(LogStatus.INFO, "select Occupation");
+	
+		test.log(Status.INFO, MarkupHelper.createLabel("select Occupation", ExtentColor.BLUE));
 		Thread.sleep(1000);
 		CompSelectPolicy.personClick();
-		extentTest.log(LogStatus.INFO, "Click persion");
+	
+		test.log(Status.INFO, MarkupHelper.createLabel("Click persion", ExtentColor.BLUE));
 		Thread.sleep(1000);
 		CompSelectPolicy.SelectageDriver();
-		extentTest.log(LogStatus.INFO, "Select age of Driver");
+	
+		test.log(Status.INFO, MarkupHelper.createLabel("Select age of Driver", ExtentColor.BLUE));
 		Thread.sleep(1000);
 		CompSelectPolicy.ClickSelectDeclaration();
-		extentTest.log(LogStatus.INFO, "Click Declaration");
+		
+		test.log(Status.INFO, MarkupHelper.createLabel("Click Declaration", ExtentColor.BLUE));
 		Thread.sleep(1000);
 		CompSelectPolicy.ClickNextotherDetail();
-		extentTest.log(LogStatus.INFO, "Click other detail button");
+		
+		test.log(Status.INFO, MarkupHelper.createLabel("Click other detail button", ExtentColor.BLUE));
 		Thread.sleep(1000);
 		CompSelectPolicy.ClickDatePicker();
-		extentTest.log(LogStatus.INFO, "Select Date Picker");
+		
+		test.log(Status.INFO, MarkupHelper.createLabel("Select Date Picker", ExtentColor.BLUE));
 		Thread.sleep(1000);
 		CompSelectPolicy.SelectDate();
-		extentTest.log(LogStatus.INFO, "Select Current Date");
+		
+		test.log(Status.INFO, MarkupHelper.createLabel("Select Current Date", ExtentColor.BLUE));
 		Thread.sleep(1000);
 		CompSelectPolicy.EnterEstimateValue("94050");
-		extentTest.log(LogStatus.INFO, "Select Estimate Value");
+		
+		test.log(Status.INFO, MarkupHelper.createLabel("Select Estimate Value", ExtentColor.BLUE));
 		Thread.sleep(1000);
 		 WebDriverWait wait = new WebDriverWait(driver, 5000);
 		CompSelectPolicy.ClickGetQuoteNow();
-		extentTest.log(LogStatus.INFO, "GetQuoteNow");
+		
+		test.log(Status.INFO, MarkupHelper.createLabel("GetQuoteNow", ExtentColor.BLUE));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='countdown']"))); 
 			CompSelectPolicy.ClickFeature();
-			extentTest.log(LogStatus.INFO, "Select Feature");		
+			
+			test.log(Status.INFO, MarkupHelper.createLabel("Select Feature", ExtentColor.BLUE));
 		Thread.sleep(1000);
 		CompSelectPolicy.selectDeductible();
-		extentTest.log(LogStatus.INFO, "Select Deductible");
+		
+		test.log(Status.INFO, MarkupHelper.createLabel("Select Deductible", ExtentColor.BLUE));
 		Thread.sleep(1000);
 		CompSelectPolicy.selectDeductibleAmount();
-		extentTest.log(LogStatus.INFO, "Select Deductible Amount");
+		
+		test.log(Status.INFO, MarkupHelper.createLabel("Select Deductible Amount", ExtentColor.BLUE));
 		Thread.sleep(1000);
 		CompSelectPolicy.clickICSelect();
-		extentTest.log(LogStatus.INFO, "Select Insurance Company");
+		
+		test.log(Status.INFO, MarkupHelper.createLabel("Select Insurance Company", ExtentColor.BLUE));
 		Thread.sleep(1000);
 		CompSelectPolicy.FrontImageClick();
 		Runtime.getRuntime().exec("D:\\selenium\\NewProject-Health\\UploadFile\\Front.exe");
-		extentTest.log(LogStatus.INFO, "Select Front vehicle image");
+		
+		test.log(Status.INFO, MarkupHelper.createLabel("\"Select Front vehicle image", ExtentColor.BLUE));
 		Thread.sleep(5000);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='image-holder-fuFront']/img")));  
 	    CompSelectPolicy.RearImageClick();
 	    Thread.sleep(5000);   
 		Runtime.getRuntime().exec("D:\\selenium\\NewProject-Health\\UploadFile\\Rear02.exe");
-		extentTest.log(LogStatus.INFO, "Select Rear vehicle image");
+		
+		test.log(Status.INFO, MarkupHelper.createLabel("Select Rear vehicle image", ExtentColor.BLUE));
 		Thread.sleep(5000);
 				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='image-holder-fuRear']/img")));  
 		CompSelectPolicy.RightImageClick();
 		Thread.sleep(5000);
 		Runtime.getRuntime().exec("D:\\selenium\\NewProject-Health\\UploadFile\\Right.exe");
-		extentTest.log(LogStatus.INFO, "Select Rear vehicle image");
+		
+		test.log(Status.INFO, MarkupHelper.createLabel("Select Rear vehicle image", ExtentColor.BLUE));
 		Thread.sleep(5000);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='image-holder-fuRight']/img")));
 		CompSelectPolicy.LeftImageClick();
 		Thread.sleep(5000);  
 		Runtime.getRuntime().exec("D:\\selenium\\NewProject-Health\\UploadFile\\Left.exe");
-		extentTest.log(LogStatus.INFO, "Select Left vehicle image");
+	
+		test.log(Status.INFO, MarkupHelper.createLabel("Select Left vehicle image", ExtentColor.BLUE));
 		Thread.sleep(5000);  
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='image-holder-fuLeft']/img")));
 		CompSelectPolicy.VINImageClick();
 		Thread.sleep(5000); 
 		Runtime.getRuntime().exec("D:\\selenium\\NewProject-Health\\UploadFile\\VIN.exe");
-		extentTest.log(LogStatus.INFO, "Select VIN vehicle image");
+		
+		test.log(Status.INFO, MarkupHelper.createLabel("Select VIN vehicle image", ExtentColor.BLUE));
 		Thread.sleep(5000); 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='image-holder-fuVIN']/img")));
 		Thread.sleep(5000); 
 		CompSelectPolicy.EnterIBAN("1115798963589785693589");
-		extentTest.log(LogStatus.INFO, "Enter IBAN Number");
+		
+		test.log(Status.INFO, MarkupHelper.createLabel("Enter IBAN Number", ExtentColor.BLUE));
 		Thread.sleep(5000); 
 		CompSelectPolicy.ImagesTerms();
-		extentTest.log(LogStatus.INFO, "Select Vehicle terms");
+		
+		test.log(Status.INFO, MarkupHelper.createLabel("Select Vehicle terms", ExtentColor.BLUE));
 		Thread.sleep(5000); 
 		CompSelectPolicy.Visa();
-		extentTest.log(LogStatus.INFO, "Select Visa");
+		
+		test.log(Status.INFO, MarkupHelper.createLabel("Select Visa", ExtentColor.BLUE));
 		Thread.sleep(5000); 
 		CompSelectPolicy.AcceptTermsPay();
-		extentTest.log(LogStatus.INFO, "Select Accepts Terms and Condition");
+		
+		test.log(Status.INFO, MarkupHelper.createLabel("Select Accepts Terms and Condition", ExtentColor.BLUE));
 		Thread.sleep(5000); 
 		CompSelectPolicy.PayNow();
-		extentTest.log(LogStatus.INFO, "Clcik on PayNow");
+		
+		test.log(Status.INFO, MarkupHelper.createLabel("Clcik on PayNow", ExtentColor.BLUE));
 		driver.quit();
-		extentTest.log(LogStatus.INFO, "Browser closed");
-		extent.endTest(extentTest);
+		
+		test.log(Status.INFO, MarkupHelper.createLabel("Browser closed", ExtentColor.BLUE));
+		//extent.endTest(extentTest);
 		//extent.flush();
 	}
 
