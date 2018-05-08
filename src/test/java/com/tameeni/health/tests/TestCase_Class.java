@@ -33,6 +33,8 @@ public class TestCase_Class extends BrowserSetting {
 		//ExtentTest extentTest =extent.startTest("Purchase Flow From My Account","Verify WebSite Title");
 	//test = extent.createTest("Main Flow");
 		
+		//Main Flow
+		
 		COMPHomeAction hrHomeAction = new COMPHomeAction(driver);
 		COMPDashboardAction CompDashboard = new COMPDashboardAction(driver);
 		COMPAddPolicyMainFlowAction CompSelectPolicy = new COMPAddPolicyMainFlowAction(driver);
