@@ -39,9 +39,7 @@ public class COMPAddPolicyMainFlowAction extends COMPAddPolicyMainFlowPage
 					Log.getLogger("\"Select Policy holder element is not found.") ;
 					
 				}
-			}	
-		
-		
+			}		
 	public void clickselectAddress() 
     {
 		try
